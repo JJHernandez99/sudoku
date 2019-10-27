@@ -39,17 +39,18 @@ class Interfaz():
             return False
             
 
-    def pedir_valores(self):
-        self.numero = input("Ingrese un numero")
-        self.fila = input("Ingrese Fila")
-        self.columna = input("Ingrese Columna")
+    def pedir_valores(self):   #Ingresa los valores el jugador 
+        self.numero = input("Ingrese un numero\n")
+        self.fila = input("Ingrese Fila\n")
+        self.columna = input("Ingrese Columna\n")
 
         print ("")
           
         
-    def jugar(self):
+    def jugar(self):    #FUNCION PARA JUGAR 
+        print("\n\n         BIENVENIDO AL SUDOKU        \n\n")
         self.ingresar_dimension()    
-        print("")
+        print("")   
         print(self.game.imprimir_tablero())
 
         while not self.game.gano():

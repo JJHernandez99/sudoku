@@ -61,7 +61,7 @@ class Interfaz():
                 print ("Numero incorrecto !!!\n")
                 print("POR FAVOR, INGRESE UN VALOR CORRECTO!!!")
 
-        while self.game.gano():
+        if self.game.gano():
             print ("Usted ha ganado!!!")
 
 if __name__ == '__main__':    

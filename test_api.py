@@ -3,7 +3,7 @@ import unittest
 from unittest.mock import patch, MagicMock
 
 from api import api
-
+                
 
 class TestAPISudoku(unittest.TestCase):
     

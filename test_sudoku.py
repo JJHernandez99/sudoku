@@ -5,62 +5,62 @@ class TestSudoku(unittest.TestCase):
 
 
     def test_Sudoku_Fila_1(self):
-        sudoku = Sudoku([["5", "3", "x", "x", "7", "x", "x", "x", "x"],
+        sudoku = Sudoku([["5", "3", "x", "x", "x", "7", "x", "x", "x"],
                          ["6", "x", "x", "1", "9", "5", "x", "x", "x"],
                          ["x", "9", "8", "x", "x", "x", "x", "6", "x"],
                          ["8", "x", "x", "x", "6", "x", "x", "x", "3"],
                          ["4", "x", "x", "8", "x", "3", "x", "x", "1"],
                          ["7", "x", "x", "x", "2", "x", "x", "x", "6"],
                          ["x", "6", "x", "x", "x", "x", "2", "8", "x"],
-                         ["x", "3", "x", "4", "1", "9", "x", "x", "5"],
+                         ["x", "x", "x", "4", "1", "9", "x", "x", "5"],
                          ["x", "x", "x", "x", "8", "x", "x", "7", "9"]])
         self.assertFalse(sudoku.ingresar_numero(0,2,5))
     
     def test_Sudoku_Fila_2(self):
-        sudoku = Sudoku([["5", "3", "x", "x", "7", "x", "x", "x", "x"],
+        sudoku = Sudoku([["5", "3", "x", "x", "x", "7", "x", "x", "x"],
                          ["6", "x", "x", "1", "9", "5", "x", "x", "x"],
                          ["x", "9", "8", "x", "x", "x", "x", "6", "x"],
                          ["8", "x", "x", "x", "6", "x", "x", "x", "3"],
                          ["4", "x", "x", "8", "x", "3", "x", "x", "1"],
                          ["7", "x", "x", "x", "2", "x", "x", "x", "6"],
                          ["x", "6", "x", "x", "x", "x", "2", "8", "x"],
-                         ["x", "3", "x", "4", "1", "9", "x", "x", "5"],
+                         ["x", "x", "x", "4", "1", "9", "x", "x", "5"],
                          ["x", "x", "x", "x", "8", "x", "x", "7", "9"]])
         self.assertFalse(sudoku.ingresar_numero(6,4,6))
     
     def test_Sudoku_Columna_1(self):
-        sudoku = Sudoku([["5", "3", "x", "x", "7", "x", "x", "x", "x"],
+        sudoku = Sudoku([["5", "3", "x", "x", "x", "7", "x", "x", "x"],
                          ["6", "x", "x", "1", "9", "5", "x", "x", "x"],
                          ["x", "9", "8", "x", "x", "x", "x", "6", "x"],
                          ["8", "x", "x", "x", "6", "x", "x", "x", "3"],
                          ["4", "x", "x", "8", "x", "3", "x", "x", "1"],
                          ["7", "x", "x", "x", "2", "x", "x", "x", "6"],
                          ["x", "6", "x", "x", "x", "x", "2", "8", "x"],
-                         ["x", "3", "x", "4", "1", "9", "x", "x", "5"],
+                         ["x", "x", "x", "4", "1", "9", "x", "x", "5"],
                          ["x", "x", "x", "x", "8", "x", "x", "7", "9"]])
         self.assertFalse(sudoku.ingresar_numero(8,0,5))
     
     def test_Sudoku_Columna_2(self):
-        sudoku = Sudoku([["5", "3", "x", "x", "7", "x", "x", "x", "x"],
+        sudoku = Sudoku([["5", "3", "x", "x", "x", "7", "x", "x", "x"],
                          ["6", "x", "x", "1", "9", "5", "x", "x", "x"],
                          ["x", "9", "8", "x", "x", "x", "x", "6", "x"],
                          ["8", "x", "x", "x", "6", "x", "x", "x", "3"],
                          ["4", "x", "x", "8", "x", "3", "x", "x", "1"],
                          ["7", "x", "x", "x", "2", "x", "x", "x", "6"],
                          ["x", "6", "x", "x", "x", "x", "2", "8", "x"],
-                         ["x", "3", "x", "4", "1", "9", "x", "x", "5"],
+                         ["x", "x", "x", "4", "1", "9", "x", "x", "5"],
                          ["x", "x", "x", "x", "8", "x", "x", "7", "9"]])
         self.assertFalse(sudoku.ingresar_numero(0,8,9))
 
     def test_Sudoku_Zona(self):
-        sudoku = Sudoku([["5", "3", "x", "x", "7", "x", "x", "x", "x"],
+        sudoku = Sudoku([["5", "3", "x", "x", "x", "7", "x", "x", "x"],
                          ["6", "x", "x", "1", "9", "5", "x", "x", "x"],
                          ["x", "9", "8", "x", "x", "x", "x", "6", "x"],
                          ["8", "x", "x", "x", "6", "x", "x", "x", "3"],
                          ["4", "x", "x", "8", "x", "3", "x", "x", "1"],
                          ["7", "x", "x", "x", "2", "x", "x", "x", "6"],
                          ["x", "6", "x", "x", "x", "x", "2", "8", "x"],
-                         ["x", "3", "x", "4", "1", "9", "x", "x", "5"],
+                         ["x", "x", "x", "4", "1", "9", "x", "x", "5"],
                          ["x", "x", "x", "x", "8", "x", "x", "7", "9"]])
         self.assertFalse(sudoku.ingresar_numero(2,2,5))
 
@@ -77,14 +77,14 @@ class TestSudoku(unittest.TestCase):
         self.assertFalse(sudoku.ingresar_numero(0,0,1))
 
     def test_Sudoku_Perdio(self):
-        sudoku = Sudoku([["5", "3", "x", "x", "7", "x", "x", "x", "x"],
+        sudoku = Sudoku([["5", "3", "x", "x", "x", "7", "x", "x", "x"],
                          ["6", "x", "x", "1", "9", "5", "x", "x", "x"],
                          ["x", "9", "8", "x", "x", "x", "x", "6", "x"],
                          ["8", "x", "x", "x", "6", "x", "x", "x", "3"],
                          ["4", "x", "x", "8", "x", "3", "x", "x", "1"],
                          ["7", "x", "x", "x", "2", "x", "x", "x", "6"],
                          ["x", "6", "x", "x", "x", "x", "2", "8", "x"],
-                         ["x", "3", "x", "4", "1", "9", "x", "x", "5"],
+                         ["x", "x", "x", "4", "1", "9", "x", "x", "5"],
                          ["x", "x", "x", "x", "8", "x", "x", "7", "9"]])
         self.assertFalse(sudoku.gano())   
     
@@ -100,14 +100,14 @@ class TestSudoku(unittest.TestCase):
                          ["6", "3", "4", "2", "7", "1", "9", "5", "8"]])
         self.assertTrue(sudoku.gano())    
 
-    def test_Sudoku_Fila_3(self):
+    def test_Sudoku_Fila_1_ch(self):
         sudoku = Sudoku([["4", "x", "x", "1"],
                          ["x", "1", "3", "x"],
                          ["x", "4", "1", "x"],
                          ["1", "x", "x", "3"]])
         self.assertFalse(sudoku.ingresar_numero(0,3,4))
     
-    def test_Sudoku_Fila_4(self):
+    def test_Sudoku_Fila_2_ch(self):
         sudoku = Sudoku([["4", "x", "x", "1"],
                          ["x", "1", "3", "x"],
                          ["x", "4", "1", "x"],
@@ -155,12 +155,6 @@ class TestSudoku(unittest.TestCase):
                          ["3", "4", "1", "2"],
                          ["1", "2", "4", "3"]])
         self.assertTrue(sudoku.gano())
-    def test_Sudoku_Zona_c(self):
-        sudoku = Sudoku([["4", "x", "x", "1"],
-                         ["x", "1", "3", "x"],
-                         ["x", "4", "1", "x"],
-                         ["1", "x", "x", "3"]])
-        self.assertTrue(sudoku.ingresar_numero(0,1,3))
 
 if __name__ == '__main__':    
     unittest.main()

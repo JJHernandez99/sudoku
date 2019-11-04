@@ -6,6 +6,8 @@ WORKDIR /sudoku
 
 RUN pip freeze > requirements.txt
 
+RUN pip install parametrized
+
 RUN pip install requests
 
 RUN pip install -r requirements.txt

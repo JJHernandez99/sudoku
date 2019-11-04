@@ -10,13 +10,13 @@ class Interfaz():
         while self.tamaño !="9" and self.tamaño != "4":
             self.tamaño = input("Ingrese el tamaño del tablero (4/9)\n")
             if self.tamaño !="9" and self.tamaño != "4":
-                print ("Ingrese el tamaño del tablero nuevamente\n")
+                print ("EL TAMAÑO DEL TABLERO NO ES CORRECTO \nIngrese el tamaño del tablero nuevamente...\n")
 
         self.tamaño = int(self.tamaño)      
         self.tablero= api (int(self.tamaño))
         self.game = Sudoku(self.tablero)
 
-    def ingresar_coordenadas(self,fila,columna,valor):  #verifica que si ingresa el valor de la fila, columna y valor  
+    def ingresar_coordenadas(self,fila,columna,valor):  #verifica que ingrese el valor de la fila, columna y valor  
 
         if (fila > 0 and fila <= self.tamaño and columna > 0 and columna <= self.tamaño 
         and valor > 0 and valor <= self.tamaño):
@@ -34,8 +34,7 @@ class Interfaz():
                 if int(numero) > 0 and int(numero) < self.tamaño+1:
                     return True
             return True
-        except Exception as w: 
-            print(w)
+        except Exception:
             return False
             
 
@@ -48,7 +47,7 @@ class Interfaz():
           
         
     def jugar(self):    #FUNCION PARA JUGAR 
-        print("\n\n         BIENVENIDO AL SUDOKU        \n\n")
+        print("\n\n         ---BIENVENIDO AL SUDOKU ---       \n\n")
         self.ingresar_dimension()    
         print("")   
         print(self.game.imprimir_tablero())
@@ -59,9 +58,11 @@ class Interfaz():
                 self.game.ingresar_numero(int(self.fila)-1, int(self.columna)-1,self.numero)
                 print(self.game.imprimir_tablero())
             else:
-                print("INGRESE UN VALOR CORRECTO")
+                print ("Numero incorrecto !!!\n")
+                print("POR FAVOR, INGRESE UN VALOR CORRECTO!!!")
 
-
+        while self.game.gano():
+            print ("Usted ha ganado!!!")
 
 if __name__ == '__main__':    
     game = Interfaz()

@@ -1,4 +1,4 @@
-                                                                                    
+
 import math
 class Sudoku():
     
@@ -88,8 +88,8 @@ class Sudoku():
         self.impreso = ""
         for i in self.tablero:
             for elemento in i:
-                self.impreso += elemento + " "
+                self.impreso += elemento + " | "
+                
             self.impreso += "\n"
             
-        return self.impreso
-
+        return self.impreso   
